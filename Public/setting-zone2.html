@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ตั้งค่าการแจ้งเตือนโซน 2</title>
-    <link rel="stylesheet" href="setting-zone.css">
+    <link rel="stylesheet" href="css/setting-zone.css">
 </head>
 <body>
     <div class="container">
@@ -19,8 +19,9 @@
                 <p>ช่วงค่าที่ตั้งไว้: <span id="soilRange">-</span>%</p>
                 <label class="switch">
                     <input type="checkbox" id="soil-alert">
-                    <span class="slider" onclick="openSoilSettingZone2()"></span>
+                    <span class="slider"></span>
                 </label>
+                <button onclick="openSoilSettingZone2()">ตั้งค่า</button>
             </div>
 
             <div class="setting-card">
@@ -29,10 +30,13 @@
                 <p>ช่วงค่าที่ตั้งไว้: <span id="airRange">-</span>%</p>
                 <label class="switch">
                     <input type="checkbox" id="air-alert">
-                    <span class="slider" onclick="openAirSettingZone2()"></span>
-                </label>
+                    <span class="slider"></span>
+                </label>  
+                <button onclick="openAirSettingZone2()">ตั้งค่า</button>              
+            </div>
         </main>
     </div>
-    <script src="setting-zone2.js"></script>
+
+    <script src="js/setting-zone2.js"></script>
 </body>
 </html>

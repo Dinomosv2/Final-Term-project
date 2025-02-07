@@ -3,36 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ทุเรียนโซน 2</title>
-    <link rel="stylesheet" href="control-zone.css">
+    <title>ทุเรียนโซน 3</title>
+    <link rel="stylesheet" href="css/control-zone.css">
 </head>
 <body>
     <div class="container">
         <header class="zone-header">
             <a href="main-control.html" class="back-button">←</a>
-            <h1>ทุเรียนโซน 2</h1>
+            <h1>ทุเรียนโซน 3</h1>
         </header>
         <main class="zone-content">
-            <button class="mode-button" id="modeButton" onclick="openModeSelection1()">คลิกเลือกโหมด</button>
+            <button class="mode-button" id="modeButton" onclick="openModeSelection3()">คลิกเลือกโหมด</button>
             
             <div class="status-circle" id="statusButton">กดเปิด</div>
             <p class="status-text" id="statusText">สถานะปิดการทำงาน</p>
             
-            <div class="info-section">
-                <button class="info-item">
-                    <img src="โหมดเซ็นเซอร์.jpg" class="icon" alt="ความชื้นในดิน">
-                    <span>ความชื้นในดิน</span>
-                    <span>31.1%</span>
-                </button>
-                <button class="info-item">
-                    <img src="ความชื้นอากาศ.jpg" class="icon" alt="ความชื้นในอากาศ">
-                    <span>ความชื้นในอากาศ</span>
-                    <span>52.4%</span>
-                </button>
+            <div class="info-item">
+                <img src="โหมดตั้งเวลา.jpg" class="icon" alt="ตั้งเวลา">
+                <span>ตั้งเวลา</span>
+                <input type="number" id="time-input" placeholder="กรอกเวลาที่ต้องการ (นาที)" min="1">
+                <button onclick="setTimer()">ตั้งเวลา</button>
+                <span id="timer-display">ไม่มีการตั้งเวลา</span>
+            </div> 
+            
+            <!-- ข้อมูลความชื้นในดิน -->
+            <div class="info-item">
+                <img src="โหมดเซ็นเซอร์.jpg" class="icon" alt="ความชื้นในดิน">
+                <span>ความชื้นในดิน</span>
+                <span id="soil-moisture-value">0%</span> <!-- ค่าเริ่มต้นคือ 0% -->
+                <input type="range" id="soil-moisture-range" min="0" max="100" value="0" step="0.1">
             </div>
+
+            <!-- ข้อมูลความชื้นในอากาศ -->
+            <div class="info-item">
+                <img src="ความชื้นอากาศ.jpg" class="icon" alt="ความชื้นในอากาศ">
+                <span>ความชื้นในอากาศ</span>
+                <span id="air-moisture-value">0%</span> <!-- ค่าเริ่มต้นคือ 0% -->
+                <input type="range" id="air-moisture-range" min="0" max="100" value="0" step="0.1">
+            </div>    
             
         </main>
     </div>
-    <script src="control-zone1.js"></script>
+    <script src="js/control-zone3.js"></script>
 </body>
 </html>
